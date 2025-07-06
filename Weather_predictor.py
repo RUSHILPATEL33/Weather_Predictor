@@ -7,9 +7,9 @@ def fetchLocationKey():
     location_url = url
     response = requests.get(location_url)
     data = response.json()
-    if response.st              atus_code == 200 and data:
-        location_key = data[0]['key']
-        return location_key
+    if response.status_code == 200 and data:
+        location_Key = data[0]['Key']
+        return location_Key
     else:
       print("error fetching location key")
 location_Key = fetchLocationKey()
@@ -18,8 +18,8 @@ response = requests.get(weather_url)
 if response.status_code == 200:
     weather_data = response.json()
     if weather_data:
-      temperature = weather_data[0]['temperature']['Metric']['Value']
-      unit = weather_data[0]['temperature']['Metric']['Unit']
+      temperature = weather_data[0]['Temperature']['Metric']['Value']
+      unit = weather_data[0]['Temperature']['Metric']['Unit']
       description = weather_data[0]['WeatherText']
       print(f"Current weather in {city}: {description}, {temperature}°c{unit}  ")
     else:
