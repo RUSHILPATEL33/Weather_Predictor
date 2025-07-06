@@ -1,6 +1,6 @@
 import requests
 
-api_key = "CeZJaNqYhrkvuYjTqx2EKKIn3m7AkjSH"
+api_key = ""
 city = input("Enter a city name:")
 url=f"http://dataservice.accuweather.com/locations/v1/cities/search?q={city}&apikey={api_key}"
 def fetchLocationKey():
